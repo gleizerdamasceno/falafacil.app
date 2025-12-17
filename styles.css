@@ -1,0 +1,101 @@
+       /* --- ESTILOS DO CORPO --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: blue;
+            /* Permite rolagem */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        /* --- CONTAINER PRINCIPAL (AZUL) --- */
+        .app-container {
+            width: 100%;
+            max-width: 1200px;
+            /* Altura automática */
+            height: auto; 
+            min-height: 80vh;
+	    border-radius: 20px;
+            background-color: blue;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: space-between;
+            
+            padding: 20px;
+            padding-bottom: 40px;
+            box-sizing: border-box;
+        }
+
+        /* --- TÍTULO NO TOPO --- */
+        .header-title {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- OS QUADRADOS (GRID DE IMAGENS) --- */
+        .item-box {
+            position: relative;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.1s;
+            
+            /* MOBILE: 48% (2 por linha) */
+            width: 48%; 
+            height: 150px; 
+        }
+
+        .item-box:active {
+            transform: scale(0.95);
+            border: 3px solid #FFC107;
+        }
+
+        .item-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* LEGENDA */
+        .label {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* --- DESKTOP (PC) --- */
+        @media (min-width: 768px) {
+            .item-box {
+                /* 4 por linha */
+                width: 23%;
+                height: 200px;
+            }
+            .label {
+                font-size: 16px;
+            }
+        }
